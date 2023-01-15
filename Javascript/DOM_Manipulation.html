@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <h1>This is the heading </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sunt consectetur tempora eaque necessitatibus sint distinctio cum neque voluptates, perspiciatis nisi esse deserunt placeat? Optio dolor alias sint eveniet suscipit quasi at.</p>
+    </div>
+    <div class="container">
+        <button>Click me XP ! </button>
+    </div>
+    <script>
+        let obj=document.getElementById("main");
+        console.log(obj);
+        let obj1=document.getElementsByClassName("container");
+        console.log(obj1);
+        obj1.innerHTML="<p>XD haha<p>";
+        let obj2=document.querySelector(".container");
+        console.log(obj2);
+        
+    </script>
+</body>
+</html>

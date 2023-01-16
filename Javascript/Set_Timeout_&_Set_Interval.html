@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout & Set Interval </title>
+</head>
+<style>
+    #time{
+        padding-left: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 12px ;
+        background-color: bisque;
+        color: darkred;
+    }
+</style>
+<body>
+    <Span  id="time"> </Span>
+    <div class="container">
+        This is a container
+    </div>
+    <div id="btn"><button>Time out !!</button></div>
+    <script>
+        console.log("Hello world!")
+        //set timeout : = Allows us to run a funciton once "after" the interval of time
+        //set interval : = Allows us to run a function repeatedly "for" the interval of time
+
+        // shortcut way
+        // setTimeout((greet) => {
+        //     console.log("delayed msg")
+        // }, 2000);
+
+        function greet(sec){
+            console.log("delayed message by ", sec , " seconds...");
+        }
+        timeout=setTimeout(greet,3000,3);
+        //clear timeout
+        let o=0;
+        element=document.getElementById('btn');
+        element.addEventListener('click',stop);
+
+        function stop(){
+            clearTimeout(timeout);
+            
+            clearInterval(timeinterval);
+            if(o==0){
+                console.log("Time bomb stopped!");
+                o=1;
+            }
+            
+            
+        }
+
+        //Set interval
+        let i = 5; 
+        
+        timeinterval=setInterval(()=>{
+            if(i!=0){
+                i--;
+                console.log("Launch in "+i);
+            }
+        },1000);
+
+        //Making a time clock using setInterval
+
+        time=document.getElementById('time');
+        setInterval(() => {
+            let time1= new Date();
+            time.innerHTML=time1;
+        }, 1000);
+
+        
+    </script>
+</body>
+</html>

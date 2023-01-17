@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow function tutorial.
+        <button id="btn">Hello!</button>
+    </div>
+    <script>
+        setTimeout(()=>{ 
+            console.log("Timed out message!");
+        },3000);
+
+        let greet=()=>{
+            console.log("hello world!");
+        }
+        //Advantage of a arrow function is that When we use this in an object it can access any elements specified inside of the object       
+        
+        let obj={
+            name: ["Raghuveer","rahil"],
+            age: "19",
+            tell(){
+                this.name.forEach((cr) => {
+                    console.log("hahah "+ cr);
+                });
+            }
+        }
+        obj.tell();
+    </script>
+</body>
+</html>

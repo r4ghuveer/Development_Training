@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date XP</title>
+</head>
+<body>
+    <div class="container">
+        <p>
+            This is a para.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam qui voluptatem sit soluta consequuntur quas, ipsa veniam laudantium aliquam corrupti ut?
+        </p>
+    </div>
+    <div class="container">
+        The date is : = <span id="date"> </span>
+    </div>
+    <script>
+        let dt= new Date();
+        let date=dt.getDate();
+        let month=dt.getMonth();
+        let year=dt.getFullYear();
+        let Tarik=document.getElementById('date');
+        Tarik.innerHTML=date+"/"+(month+1)+"/"+year;
+    </script>
+</body>
+</html>

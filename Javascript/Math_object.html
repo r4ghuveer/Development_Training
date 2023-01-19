@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="container">
+        <h1>This is the heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nihil unde expedita officia, hic autem illum cupiditate consequatur dolorum consectetur, ratione iste, maxime non corporis ipsum optio est molestias minima vero? Aliquam.</p>
+    </div>
+    <script>
+        let M= Math;
+        // console.log(M.PI);
+
+        let A=32.2323;
+        let B=24;
+        console.log(M.round(A));
+        console.log(M.round(B));
+        console.log(M.pow(2,2));
+        console.log(M.ceil(M.sqrt(B)));
+        console.log(M.min(2,3));
+        console.log(M.max(2,3));
+        console.log(M.abs(-2));
+
+        //Generating a random number between 1 - 100
+        let a=1;
+        let b=2;
+        let rand=((b-a+1)*M.random())+a;
+        console.log(M.floor(rand));
+        // console.log(M.random());
+        
+        </script>
+</body>
+</html>

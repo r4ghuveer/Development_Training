@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Tutorial</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <h1>This is json tutorial</h1>
+    <div class="container">
+        This is my container
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque labore nostrum excepturi ut, dicta esse.
+    </div>
+<script>
+    let jsonobj ={
+        name : "raghuveer",
+        age : 19,
+        gender : "male",
+        food : "Bindi Lover"
+    }
+    console.log(jsonobj);
+    let myjsonstr=JSON.stringify(jsonobj);
+    console.log(myjsonstr);
+    myjsonstr=myjsonstr.replace(19,20);
+    console.log(myjsonstr);
+
+    let newjsonobj = JSON.parse(myjsonstr);
+    console.log(newjsonobj);
+</script>    
+</body>
+</html>

@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <h1>This is the heading</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nihil unde expedita officia, hic autem illum cupiditate consequatur dolorum consectetur, ratione iste, maxime non corporis ipsum optio est molestias minima vero? Aliquam.</p>
+        <p id="slash"></p>
     </div>
     <script>
         let M= Math;
@@ -27,13 +27,19 @@
         console.log(M.min(2,3));
         console.log(M.max(2,3));
         console.log(M.abs(-2));
+        
 
-        //Generating a random number between 1 - 100
+        // Generating a random number between 1 - 100
         let a=1;
         let b=2;
         let rand=((b-a+1)*M.random())+a;
         console.log(M.floor(rand));
-        // console.log(M.random());
+        console.log(M.random());
+        
+        console.log(M.round(2.4));
+
+       
+        
         
         </script>
 </body>

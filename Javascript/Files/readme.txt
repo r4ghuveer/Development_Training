@@ -1,0 +1,4 @@
+And I'll be gone gone tonight
+The ground below my feet is buring bright
+The way that i'll be holding on to tight 
+With nothing in between

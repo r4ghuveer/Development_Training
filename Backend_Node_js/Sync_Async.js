@@ -19,8 +19,3 @@ The way that i'll be holding on to tight
 With nothing in between*/    
 
 //as we can see Message!! comes before the file1.txt's content
-
-//but if we use readFileSync
-let A=fs.readFileSync("G:/Web_dev/Javascript/Files/File1.txt","utf-8");
-console.log(A);
-console.log("Message!!");

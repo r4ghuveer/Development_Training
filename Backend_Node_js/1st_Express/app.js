@@ -1,9 +1,11 @@
 const express = require('express');
+const fs=require('fs');
 const path= require('path');
 const app = express();
 const port = 80;
 //for serving static files EXPRESS SPECEFIC STUFF
 app.use('/static',express.static('static')) //now we can use /static url to access code in static folder.
+app.use(express.urlencoded());
 
 // Set the template engine as pug PUG SPECIFIC STUFF
 app.set('view engine','pug')
@@ -40,6 +42,20 @@ app.get('/about',(req,res) =>{ //for get request
 app.get('/help',(req,res)=>{        //since there is no help page
     res.status(404).send("Maro mujhe");  
 });
+
+
+//POST 
+app.post('/',(req,res)=>{
+    let name=(req.body.name);
+    let age=(req.body.age);
+    let gender=(req.body.gender);
+    let address=(req.body.address);
+    let more=(req.body.more);
+    let output_to_write=`The name of client is ${name}, ${age} years old, ${gender} gender, address is ${address}; and more about him / her ${more}`;
+    fs.writeFileSync('output.txt',output_to_write)
+    const msg={'message':'Your form has been submited'}
+    res.status(200).render('index.pug',msg);
+})
 
 app.listen(port,()=>{
     console.log(`The application started on port ${port}`);

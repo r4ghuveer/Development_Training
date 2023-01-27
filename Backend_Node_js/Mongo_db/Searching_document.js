@@ -4,13 +4,6 @@
 
 
 //inserting data or document in database using mongodb
-use 1stDB
-db.item.insertOne({name: 'raghuveer',
-    age: 20,
-    gender: 'male'
-})
+//use 1stDB
 
-//For inserting many document at same time
-
-db.item.insertMany([{name: 'Sammer',age: 23,gender: 'male'},{name: 'Rahul',age: 21,gender: 'male'},{name: 'Esdeath',age: 21,gender: 'female'}])
-
+db.item.find({age: 21}); //This querry will give all the objects that has age = 21

@@ -24,4 +24,12 @@ db.item.find({age :{$lt: 20}})// Returns all objects that has age less than <20 
 db.item.find({age :{$gt: 20}, gender:'male'})
 
 //OR OPERATOR : - if satify any of the filter than true;
-db.item.find($or[{age :{$gt: 20}, gender:'male'}])
+db.item.find({$or : [{age :{$gt: 20}}, {gender:'male'}]})
+//output : { "_id" : ObjectId("63d30c9decee16d584e1b73c"), "name" : "Esdeath", "age" : 21, "gender" : "female" }
+
+//if we want to only see one attribute instead of seeing all other attribute we can : - 
+db.item.find({$or : [{age :{$gt: 20}}, {gender:'male'}]},{name:1}) //Here i want to see name only, so name:1 (name : true)
+//{ "_id" : ObjectId("63d30c9decee16d584e1b73c"), "name" : "Esdeath" }
+
+//similarly
+db.item.find({$or : [{age :{$gt: 20}}, {gender:'male'}]},{name:1,age:1})// This will show age and name only

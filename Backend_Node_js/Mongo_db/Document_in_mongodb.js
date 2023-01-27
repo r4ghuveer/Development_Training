@@ -4,7 +4,7 @@
 
 
 //inserting data or document in database using mongodb
-use 1stDB
+
 db.item.insertOne({name: 'raghuveer',
     age: 20,
     gender: 'male'
@@ -14,3 +14,5 @@ db.item.insertOne({name: 'raghuveer',
 
 db.item.insertMany([{name: 'Sammer',age: 23,gender: 'male'},{name: 'Rahul',age: 21,gender: 'male'},{name: 'Esdeath',age: 21,gender: 'female'}])
 
+//deleting
+db.item.deleteOne({name:'raghuveer'})//if documents have same attribute it will delete the 1st one.

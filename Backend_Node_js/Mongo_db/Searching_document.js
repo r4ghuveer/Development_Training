@@ -33,3 +33,5 @@ db.item.find({$or : [{age :{$gt: 20}}, {gender:'male'}]},{name:1}) //Here i want
 
 //similarly
 db.item.find({$or : [{age :{$gt: 20}}, {gender:'male'}]},{name:1,age:1})// This will show age and name only
+
+"GG"

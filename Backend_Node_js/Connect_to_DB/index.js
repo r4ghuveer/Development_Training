@@ -32,11 +32,17 @@ mykitten.speak();
 
 mykitten.save(function(err,obj){ // Here obj is mykitten's object that is taken as argument when we call save method.
     if(err) return console.log(err);
-    obj.speak();
+    // obj.speak();
 })
 
 //Saving mykitten2 document in My_cat collection
 mykitten2.save(function(err,obj){ // Here obj is mykitten's object that is taken as argument when we call save method.
     if(err) return console.log(err);
-    obj.speak();//These functions right now are just for showing something's happening
+    // obj.speak();//These functions right now are just for showing something's happening
+})
+
+//For finding or searching in the collection
+Kitten.find({name:"snow"},function(err,obj){
+    if(err) console.log(err);
+    console.log(obj); // THis will show use all the documents in "My_cat" collection who's name = snow;
 })

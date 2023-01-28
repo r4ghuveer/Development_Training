@@ -16,3 +16,9 @@ db.item.insertMany([{name: 'Sammer',age: 23,gender: 'male'},{name: 'Rahul',age: 
 
 //deleting
 db.item.deleteOne({name:'raghuveer'})//if documents have same attribute it will delete the 1st one.
+
+//updating
+//update Esdeath age to 20 <3
+db.item.updateOne({name:"Esdeath"},{$set:{age:20}})
+//updateMany to update all with name : "Esdeath"
+db.item.updateMany({name:"Esdeath"},{$set:{age:20}})

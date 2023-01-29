@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is practise for FETCH</title>
+</head>
+<style>
+    #btn{
+        margin: 200px auto;
+    }
+    #data{
+        
+        border: 1.5px solid lightseagreen;
+        padding: 100px 100px;
+    }
+</style>
+<body>
+    <h1 style="color:blueviolet">Fetch</h1>
+   <div class="container">
+    Here is the data Fetched from an json : -
+   </div> 
+   <div class="container" >
+    <p id="data"></p>
+    <button id="btn" onclick="getdata()">click me !</button>
+   </div>
+</body>
+<script>
+    function getdata(){
+        fetch("http://127.0.0.1:5500/Javascript/FETCH/entry.json")
+            .then(response => response.json())
+            .then(record => {
+                let peoples=record;
+                let A=document.getElementById('data');
+                console.log(peoples);
+                A.innerHTML=JSON.stringify(peoples);
+            })
+    }
+</script>
+</html>

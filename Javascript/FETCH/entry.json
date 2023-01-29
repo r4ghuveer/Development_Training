@@ -1,0 +1,24 @@
+{
+    "people": [
+        {
+            "name": "raghuveer",
+            "age": 20,
+            "gender": "male"
+        },
+        {
+            "name": "devashish",
+            "age": 23,
+            "gender": "male"
+        },
+        {
+            "name": "Anushree",
+            "age": 20,
+            "gender": "female"
+        },
+        {
+            "name": "Esdeath",
+            "age": 20,
+            "gender": "female"
+        }
+    ]
+}

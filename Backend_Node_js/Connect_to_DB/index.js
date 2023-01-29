@@ -46,3 +46,5 @@ Kitten.find({name:"snow"},function(err,obj){
     if(err) console.log(err);
     console.log(obj); // THis will show use all the documents in "My_cat" collection who's name = snow;
 })
+
+// The document will keep on increasing because every time we run this code it will save the "same" document with name snow each time in collection My_cat.

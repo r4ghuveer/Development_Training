@@ -28,7 +28,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab animi nostrum quam hic dolorem officia consectetur, sunt corrupti maiores sed minus doloremque ! Lorem ipsum dolor sit amet consectetur adipisicing elit. At facere quia quasi eveniet sint odio veritatis, animi suscipit necessitatibus, tempora delectus quis molestiae laudantium ipsum? Fugit, doloremque minus? Molestias explicabo eveniet architecto magnam sunt maxime eos deserunt ut voluptas nulla blanditiis incidunt adipisci consequuntur mollitia, natus officiis omnis ducimus libero corporis dolorum! Nobis, obcaecati. Quis at alias rem, deserunt quia expedita ut ducimus nemo dolores temporibus corrupti optio consequatur vel inventore asperiores accusantium eligendi quasi ad non! Quibusdam, enim. Iure, libero neque doloribus minus commodi corrupti iusto blanditiis sequi hic repudiandae delectus provident enim molestiae distinctio tempore voluptate alias quisquam.
         </p>
     </div>
-    <button id="btn" onclick="hide()"> Click me !  XP</button>
+    <button id="btn" onclick="hide()" onmouseover="colors()" onmouseout="colors()"> Click me !  XP</button>
     <script>
         //Browser events: = 
         //1)click
@@ -44,7 +44,15 @@
 
         // transitioned
         
-
+        function colors(){
+            let obj2=document.getElementById('btn');
+            if(obj2.style.backgroundColor!='pink'){
+                obj2.style.backgroundColor='pink';
+            }
+            else{
+                obj2.style.color="white";
+            }
+        }
         let obj1=document.getElementById("para");
         function hover(){
             if(obj1.style.color!='black'){

@@ -34,7 +34,8 @@
         Tarik.innerHTML=date+"/"+(month+1)+"/"+year;
         let wakt=document.getElementById('tima');
         setInterval(()=>{
-            wakt.innerHTML=" "+dt.getHours()+" : "+dt.getMinutes()+" : "+dt.getSeconds();
+            let dp= new Date();
+            wakt.innerHTML=" "+dp.getHours()+" : "+dp.getMinutes()+" : "+dp.getSeconds();
         }, 1000);
         
     </script>

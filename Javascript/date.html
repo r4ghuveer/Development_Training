@@ -22,6 +22,9 @@
     <div class="container">
         The date is : = <span id="date"> </span>
     </div>
+    <div>
+        <p id="tima"></p>
+    </div>
     <script>
         let dt= new Date();
         let date=dt.getDate();
@@ -29,6 +32,11 @@
         let year=dt.getFullYear();
         let Tarik=document.getElementById('date');
         Tarik.innerHTML=date+"/"+(month+1)+"/"+year;
+        let wakt=document.getElementById('tima');
+        setInterval(()=>{
+            wakt.innerHTML=" "+dt.getHours()+" : "+dt.getMinutes()+" : "+dt.getSeconds();
+        }, 1000);
+        
     </script>
 </body>
 </html>

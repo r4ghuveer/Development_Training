@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online_Appointment_Request</title>
+</head>
+<style>
+    .heading{
+        display: flex;
+        background-color: rgb(77, 200, 222);
+        padding-left: 100px;
+        margin-right: 600px;
+        height: 111px;
+    }
+    .firstblock{
+        display: inline-block;
+    }   
+    p{
+        color: white;
+    }
+    .divs{
+       margin-top: 20px;
+        display: inline-block;
+    }
+    .div1{
+        margin-top: 2px;
+        display: inline-block;
+    }
+    div{
+        font-weight: bold;
+    }
+    .divs2{
+        margin-top: 20px;
+        display: inline-block;
+        padding-left: 250px;
+    }
+    p{
+        font-size: 15px;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    .container{
+        margin-right: 600px;
+        border: 1px solid grey;
+        
+    }
+    label[for="lastname"]:after {
+    content: " *";
+    color: red;
+  }
+    label[for="name"]:after {
+    content: " *";
+    color: red;
+  }
+  form{
+    display: inline;
+  }
+  .lighttext{
+    font-weight: 200;
+    color: rgb(149, 149, 149);
+  }
+</style>
+<body>
+    <div class="heading">
+        <div class="divs">
+            <p style="font-weight: bold; font-size: 25px;">Online Appointment Request</p>
+        </div>
+        <div class="divs" style="padding-left: 20px;">
+            <p>Chicago Dental 2</p>
+            <p>414 Plaza Dr Suite 200</p>
+            <p>Westmont IL 60559</p>
+            <p>Phone: 1-800-944-6646</p>
+        </div>
+        <div class="divs" style="padding-left: 20px;">
+            <p>Fax: 1-630-323-6240</p>
+        </div>
+    </div>
+    <div class="container">
+            <form action="/">
+                <div class="div1">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <div>Birth Date: <input type="date"></div>
+                    <div>Address 1: <input type="text"></div>
+                    <div>Address 2: <input type="text"></div>
+                    <div>City: <input type="text"></div>
+                    <label for="state">Car</label>
+                    <select name="State:" id="state">
+                        <option value="MH">Maharashtra</option>
+                        <option value="AP" selected>Andra Pradesh</option>
+                    </select>
+                    <div>Zip:<input type="text" maxlength="4" value="____"></div>
+                </div>
+                <div class="divs2">
+
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" required>
+                    
+                    <label for="gender">Car</label>
+                    <select name="Gender" id="gender">
+                        <option value="MH">Male</option>
+                        <option value="AP" selected>Female</option>
+                    </select>
+                    <div>
+                        Confirmation : Phone <input type="radio" name="confirm"> Text <input type="radio" name="confirm">
+                        Email <input type="radio" name="confirm">
+                    </div>
+    
+                    <label for="name">Primary Phone:</label>
+                    <input type="number" id="name" required>
+                    <div>Cell Phone:<input type="number" id="name"></div>
+                    <div>Email Address: <input type="email"></div>
+                    <div>Best time to call: <input type="text"></div>
+                    <p class="lighttext">Selecting Email or Text will allow us to automatically send you an appointment <br>confirmation if we are able to schedule your appointment within your requested time<br> frame.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

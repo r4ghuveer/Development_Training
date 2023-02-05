@@ -14,3 +14,5 @@
 X<sup>2
 
 This is <mark>Highlighted.
+
+<kbd>cmd + shift + p</kbd>

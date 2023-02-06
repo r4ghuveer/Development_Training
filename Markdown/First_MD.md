@@ -5,7 +5,7 @@
 <u>This line is underlined</u>
 <br>
 <br>
-```### This is a table
+### This is a table
 | Syntax | Description | What if |
 | - | - | - |
 | Header | Title | DO |

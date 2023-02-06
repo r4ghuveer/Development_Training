@@ -17,5 +17,4 @@ This is <mark>Highlighted.
 
 <kbd>cmd + shift + p</kbd>
 
----
-***
+----

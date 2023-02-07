@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+</head>
+<body>
+    1st num<input type="number" id="a">
+    2nd num<input type="number" id="b">
+    <input type="number" id="ans" >
+    <button onclick="add()">SUM</button>
+    <script>
+        function add(){
+
+            A=document.getElementById("a")
+            B=document.getElementById("b")
+            ans=document.getElementById('ans')
+            ans.value=Number(A.value)+Number(B.value);
+        }
+    </script>
+</body>
+</html>

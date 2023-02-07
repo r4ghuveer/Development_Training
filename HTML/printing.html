@@ -9,15 +9,19 @@
 <body>
     <div><p id="listing"></p></div>
     <script>
-        let array=["a","b","c","d","e"]
-        let i=1;
-        let str="";
-        for(i=0; i<array.length;i++){
-            console.log("hello")
-            list=document.getElementById('listing');
-            str+=(i+1)+". "+array[i]+"<br>";
-        }
-        list.innerHTML=str;
+        // let array=["a","b","c","d","e"]
+        // let i=1;
+        // let str="";
+        // for(i=0; i<array.length;i++){
+        //     list=document.getElementById('listing');
+        //     str+=(i+1)+". "+array[i]+"<br>";
+        // }
+        // list.innerHTML=str;
+        stu=[2,3,"what",1,2,3,4,5];
+        stu.sort(function(a,b){
+            return a-b
+        });
+        document.getElementById('listing').innerHTML=stu;
     </script>
 </body>
 </html>

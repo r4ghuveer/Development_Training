@@ -21,4 +21,10 @@ This is <mark>Highlighted.
 
 # Images
 
+To change height and width use img tag
+
+<img src="https://avatars.githubusercontent.com/u/101916585?v=4" height="50" width="50">
+
+---
+
 ![Not found](https://avatars.githubusercontent.com/u/101916585?v=4 "You are already under my illusion")

@@ -35,6 +35,8 @@ To change height and width use img tag
 |:-:|:-:|
 |![First Image](https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?h=750&w=1260)|![Second Image](https://images.pexels.com/photos/1335115/pexels-photo-1335115.jpeg?h=750&w=1260)|
 
-[![][thumbnail]](https://youtu.be/Rgx8dpiPwpA "Life as an Engineer - WFH")
+### You're Breathtaking
 
-[thumbnail]: https://raw.githubusercontent.com/6aravind/tidbits/main/assets/images/markdown_Life%20as%20Engineer.png
+<img align="right" width="100" height="100" src="https://media.tenor.com/images/6a136e1c2d7b30298a5b657348097a60/tenor.gif">
+
+This is a GiF in play

@@ -30,3 +30,7 @@ To change height and width use img tag
 ![Not found](https://avatars.githubusercontent.com/u/101916585?v=4 "You are already under my illusion") -->
 
 ## **Hello world, My name is raghuveer XD**
+
+|First Image|Second Image|
+|:-:|:-:|
+|![First Image](https://images.pexels.com/photos/585759/pexels-photo-585759.jpeg?h=750&w=1260)|![Second Image](https://images.pexels.com/photos/1335115/pexels-photo-1335115.jpeg?h=750&w=1260)|

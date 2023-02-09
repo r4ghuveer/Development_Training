@@ -16,3 +16,9 @@ It is a long established fact that a reader will be distracted by the readable c
 def PY_func():
     print("This is a python function")
 ```
+
+```html
+<div>
+    This is a div
+</div>
+```

@@ -11,3 +11,8 @@ It is a long established fact that a reader will be distracted by the readable c
 
 
 **I am bold**
+
+```python
+def PY_func():
+    print("This is a python function")
+```

@@ -40,3 +40,14 @@ To change height and width use img tag
 <img align="right" width="100" height="100" src="https://media.tenor.com/images/6a136e1c2d7b30298a5b657348097a60/tenor.gif">
 
 This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play
+This is a GiF in play

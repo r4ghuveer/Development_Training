@@ -9,7 +9,7 @@ It is a long established fact that a reader will be distracted by the readable c
 **I should be bold but am not**
 </div>
 
-<img src="https://assets.dicebreaker.com/chess-playing-hand.jpeg/BROK/thumbnail/1600x900/quality/100/chess-playing-hand.jpeg">
+<img src="https://assets.dicebreaker.com/chess-playing-hand.jpeg/BROK/thumbnail/1600x900/quality/100/chess-playing-hand.jpeg" height="100" width="200">
 
 **I am bold**
 

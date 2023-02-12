@@ -13,7 +13,7 @@ It is a long established fact that a reader will be distracted by the readable c
 
 <img src="https://assets.dicebreaker.com/chess-playing-hand.jpeg/BROK/thumbnail/1600x900/quality/100/chess-playing-hand.jpeg" height="100" width="200">
 
-**I am bold**
+**I am bold, and this is chess**
 
 ```python
 def PY_func():

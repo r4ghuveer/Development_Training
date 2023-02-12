@@ -26,3 +26,5 @@ def PY_func():
     This is a div
 </div>
 ```
+
+<button>Hello</button>

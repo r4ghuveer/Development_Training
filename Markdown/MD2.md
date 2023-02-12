@@ -9,6 +9,7 @@ It is a long established fact that a reader will be distracted by the readable c
 **I should be bold but am not**
 </div>
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/175px-Markdown-mark.svg.png">
 
 **I am bold**
 

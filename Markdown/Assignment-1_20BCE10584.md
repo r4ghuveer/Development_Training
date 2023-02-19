@@ -6,7 +6,13 @@
 
 <img src="que.png">
 
-**Answer** : -
+<br>
+
+# **Answer** : -
+
+**Output** : -
+
+<img src="ans.png">
 
 ## **HTML** : -
 
@@ -320,6 +326,3 @@ function validate() {
 
 ---
 ---
-
-**Output** : -
-

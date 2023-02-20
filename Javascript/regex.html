@@ -16,7 +16,11 @@
         //let reg=/sc{2}ript/     this will check whether that c occurs 2 times  i.e. sccript
         //let reg=/sc{0,2}ript/   this means c can repeat 0,1,2 times  #range {0,2}
         
-        //Grouping : - I
+        //Grouping : - If you want to apply same function to multiple character you can use () grouping
+        //let reg=/(scr){2}ipt/   it should be scrscript
+
+        //Starting:
+        //let reg=/^script/  "^" this means it should start with script
          let str="script java";
         let result=reg.exec(str);
         console.log(result);

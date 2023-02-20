@@ -11,7 +11,13 @@
         let reg=/script/;
         //let reg=/s[a-b]cript/   this will check a to b between s and c of script  similarly [0-9][A-Z]
         //let reg=/s[^r]ript      this will check whether the second chracter is "any character except r"
-        let str="script java";
+
+        //Quantifiers {2}
+        //let reg=/sc{2}ript/     this will check whether that c occurs 2 times  i.e. sccript
+        //let reg=/sc{0,2}ript/   this means c can repeat 0,1,2 times  #range {0,2}
+        
+        //Grouping : - I
+         let str="script java";
         let result=reg.exec(str);
         console.log(result);
 

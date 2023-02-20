@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        let reg=/script/;
+        // let reg=/script/;
         //let reg=/s[a-b]cript/   this will check a to b between s and c of script  similarly [0-9][A-Z]
         //let reg=/s[^r]ript      this will check whether the second chracter is "any character except r"
 
@@ -21,7 +21,13 @@
 
         //Starting:
         //let reg=/^script/  "^" this means it should start with script
-         let str="script java";
+
+        /*Username validation: -
+        1)Starts with character
+        2)Minimum 3 , Maximum 15
+        */
+        let reg=/^[a-zA-Z][a-zA-Z0-9]{2,14}$/
+        let str="a1ds";
         let result=reg.exec(str);
         console.log(result);
 

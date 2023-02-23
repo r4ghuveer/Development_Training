@@ -10,24 +10,18 @@
 <style>
     .container{
         padding: 50px;
-        /* padding-top: 90px; */
         border: 2px solid black;
-        /* height: 100px; */
         width: 300px;
     }
     #welcome-msg {
-        /* display: inline; */
         position: fixed;
         font-size: 20px;
-        /* transform: translate(200%, 200%); */
         background-color: rgb(241, 186, 186);
-        /* padding: 20px;
-        top: 20px; */
         margin-left: 180px;
         border: 2px solid rgb(239, 159, 159);
     } 
-    #boxes{
-        padding-top: 12px;
+    #addandremove{
+        margin-top: 40px;
     }
     .add{
         border: 1px solid palevioletred;
@@ -41,6 +35,9 @@
         background-color: antiquewhite;
         padding: 10px;
     }
+    #my-element{
+        margin-top: 40px;
+    }
     .style2 {
         color: blue;
         font-size: 20px;
@@ -51,40 +48,43 @@
 
 <body>
     <div class="container">
-
-        <div id="welcome-msg" style="display:none; color: rgb(11, 11, 11); ">Welcome!</div>
+        <div id="welcome-msg" style="padding-top: 40px; display:none; color: rgb(11, 11, 11); ">Welcome!</div>
         <button id="welcome-btn" style="display: block;">Click me!</button>
-
-        <div id="boxes">
+        <p>1) Welcome Message ! </p>
+        
+        <div id="boxes" style="padding-top: 40px;">
             <input type="text" class="input-box">
             <input type="text" class="input-box">
             <input type="text" class="input-box">
         </div>
+        <p>2) On click color change to yellow</p>
 
         <div id="addandremove" >Add / Remove</div>
         <button id="addbutton" style="display: inline-block;">Add</button>
         <button id="removebutton">Remove</button>
+        <p>3) Add and Remove style class</p>
 
         <div id="my-element" class="style1">My Element</div>
         <button id="style-btn" style="display: block;">Change Style</button>
+        <p>4) Toggle Style property</p>
 
         <div>
             <input type="text" id="text_input" style="display: block;">
             <button onclick="textonbut()" id="but1">↓</button>
         </div>
+        <p>5) Written text on input should display on button</p>
 
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-        <!--jQuery-->
+        
+    <!-- Welcome -->
         <script>
             $(document).ready(function() {
                 $("#welcome-btn").click(function() {
                     $("#welcome-msg").fadeIn("slow");
                 });
             });
-        
-        // Add / Remove
         $(document).ready(function() {
         $('#addbutton').click(function(){
             $("#addandremove").addClass("add");
@@ -94,34 +94,34 @@
         });
     });
             
-        // Toggle
-            const inputBoxes = document.querySelectorAll(".input-box");
-            inputBoxes.forEach(function(inputBox) {
-            inputBox.addEventListener("click", function() {
-                if(this.style.backgroundColor==="yellow"){
-                    this.style.backgroundColor="white";
-                }
-                else{
-                    this.style.backgroundColor = "yellow";
-                }
-                 });
-            });
-            
-            // style change
-            
-            $("#style-btn").click(function() {
-                $("#my-element").toggleClass("style1 style2");
-                });
-            
-        // Text on button
-        $('#but1').click(function(){
-            if($('#text_input').val()==""){
-                $('#but1').text("↓");
-            }else{
-                let values = $('#text_input').val();
-                $('#but1').text(values);
+    // Toggle
+        const inputBoxes = document.querySelectorAll(".input-box");
+        inputBoxes.forEach(function(inputBox) {
+        inputBox.addEventListener("click", function() {
+            if(this.style.backgroundColor==="yellow"){
+                this.style.backgroundColor="white";
             }
-        })
-        </script>
+            else{
+                this.style.backgroundColor = "yellow";
+            }
+                });
+        });
+            
+    // style change
+    
+    $("#style-btn").click(function() {
+        $("#my-element").toggleClass("style1 style2");
+        });
+            
+    // Text on button
+    $('#but1').click(function(){
+        if($('#text_input').val()==""){
+            $('#but1').text("↓");
+        }else{
+            let values = $('#text_input').val();
+            $('#but1').text(values);
+        }
+    })
+</script>
 </body>
 </html>

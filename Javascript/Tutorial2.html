@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial - 2</title>
+</head>
+
+<style>
+    .container{
+        padding: 50px;
+        /* padding-top: 90px; */
+        border: 2px solid black;
+        /* height: 100px; */
+        width: 300px;
+    }
+    #welcome-msg {
+        /* display: inline; */
+        position: fixed;
+        font-size: 20px;
+        /* transform: translate(200%, 200%); */
+        background-color: rgb(241, 186, 186);
+        /* padding: 20px;
+        top: 20px; */
+        margin-left: 180px;
+        border: 2px solid rgb(239, 159, 159);
+    } 
+    #boxes{
+        padding-top: 12px;
+    }
+    .add{
+        border: 1px solid palevioletred;
+        background-color: lightpink;
+        border-radius: 2px;
+        display: block;
+    }
+    .style1 {
+        color: red;
+        font-size: 20px;
+        background-color: antiquewhite;
+        padding: 10px;
+    }
+    .style2 {
+        color: blue;
+        font-size: 20px;
+        background-color: beige;
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div id="welcome-msg" style="display:none; color: rgb(11, 11, 11); ">Welcome!</div>
+        <button id="welcome-btn" style="display: block;">Click me!</button>
+
+        <div id="boxes">
+            <input type="text" class="input-box">
+            <input type="text" class="input-box">
+            <input type="text" class="input-box">
+        </div>
+
+        <div id="addandremove" >Add / Remove</div>
+        <button id="addbutton" style="display: inline-block;">Add</button>
+        <button id="removebutton">Remove</button>
+
+        <div id="my-element" class="style1">My Element</div>
+        <button id="style-btn" style="display: block;">Change Style</button>
+
+        <div>
+            <input type="text" id="text_input" style="display: block;">
+            <button onclick="textonbut()" id="but1">↓</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <!--jQuery-->
+        <script>
+            $(document).ready(function() {
+                $("#welcome-btn").click(function() {
+                    $("#welcome-msg").fadeIn("slow");
+                });
+            });
+        
+        // Add / Remove
+        $(document).ready(function() {
+        $('#addbutton').click(function(){
+            $("#addandremove").addClass("add");
+        });
+        $('#removebutton').click(function(){
+            $("#addandremove").removeClass("add");
+        });
+    });
+            
+        // Toggle
+            const inputBoxes = document.querySelectorAll(".input-box");
+            inputBoxes.forEach(function(inputBox) {
+            inputBox.addEventListener("click", function() {
+                if(this.style.backgroundColor==="yellow"){
+                    this.style.backgroundColor="white";
+                }
+                else{
+                    this.style.backgroundColor = "yellow";
+                }
+                 });
+            });
+            
+            // style change
+            
+            $("#style-btn").click(function() {
+                $("#my-element").toggleClass("style1 style2");
+                });
+            
+        // Text on button
+        $('#but1').click(function(){
+            if($('#text_input').val()==""){
+                $('#but1').text("↓");
+            }else{
+                let values = $('#text_input').val();
+                $('#but1').text(values);
+            }
+        })
+        </script>
+</body>
+</html>

@@ -5,7 +5,7 @@ const app = express();
 const bodyparser = require('body-parser');
 const mongoose=require('mongoose')
 mongoose.set('strictQuery', true);
-const port = process.env.PORT || 80;  //env stands for environment, this will set the port according if the website is hosted on a domain || if not it will take the 80 port
+const port = process.env.PORT || 80;  //env stands for environment, this will set the port according if the website is hosted on a domain || if not it will take the 80 port.. to set the environment variable, type in terminal : - set PORT=5000
 mongoose.connect('mongodb://127.0.0.1:27017/login_details')
 
 //Creating schema

@@ -24,11 +24,16 @@
                 const btn = document.querySelector('button');
                 this.names = ['Max', 'Manu', 'Anna'];
                 this.currentName = 0;
-                btn.addEventListener('click', () => {
+                btn.addEventListener('click', () => { //this refers to the thing that it(this) is being called in
                     this.addName();
                 });
+                //btn.addEventListener('click',this.addName); //here this.addName refers to btn which will give error as after calling addName all variables will not invoke
+
+                //That is why we use arrow function as it allows this to refer to the object overall
+
                 // Alternative:
                 // btn.addEventListener('click', this.addName.bind(this));
+                // Here bind(this) will that the previous this to the 'this ' of the constructor the object called.
             }
             
             addName() {

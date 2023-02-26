@@ -4,7 +4,7 @@ let p1 = new Promise((resolve, reject) => {
             // console.log("I am a promise and I am resolved")
             resolve(true) // this "true" or any other value here will be send to value in p1.then()
     }, 5000)
-})
+});
 
 let p2 = new Promise((resolve, reject) => {
     console.log("Promise is pending")

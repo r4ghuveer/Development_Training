@@ -6,7 +6,7 @@ It is a long established fact that a reader will be distracted by the readable c
 </details>
 
 <div>
-**I should be bold but am not**
+**I should be bold but am not XD**
 </div>
 
 <br>

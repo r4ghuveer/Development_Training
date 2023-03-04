@@ -10,7 +10,6 @@ const server = http.createServer((req,res)=>{
         res.write('<html><body><li><ul>Raghuveer</ul><ul>Awesome</ul></li></body></html>');
         res.end();
     }
-    
     if(url=="/create-user" && method=="POST"){
         const name = []
         req.on('data',(username)=>{

@@ -10,6 +10,7 @@ const server = http.createServer((req,res)=>{
         res.write('<html><body><li><ul>Raghuveer</ul><ul>Awesome</ul></li></body></html>');
         res.end();
     }
+    
     if(url=="/create-user" && method=="POST"){
         const name = []
         req.on('data',(username)=>{
@@ -21,9 +22,7 @@ const server = http.createServer((req,res)=>{
             res.write(`<html><body><p>${messages}</p></body></html>`);
             res.end();
         });
-        // res.statusCode = 302;
-        // res.setHeader('Location', '/');
-        // return res.end();
+        
     }
 });
 

@@ -274,5 +274,8 @@ if (isset($_POST['submit'])) {
   mysqli_close($conn);
 }
 ?>
-
 ```
+
+# **Output** : -
+
+<img src="Assignment-2_20BCE10584.png">

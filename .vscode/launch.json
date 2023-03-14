@@ -12,9 +12,9 @@
                 "<node_internals>/**"
             ],
             "program": "${workspaceFolder}\\Javascript\\Assignment_udemy.js",
-            "restart": true,
+            "restart": true, //this restarts the debugger along with nodemon
             "runtimeExecutable": "nodemon",
-            "console":"integratedTerminal"
+            "console":"integratedTerminal" // To get both debugger and terminal
         }
     ]
 }

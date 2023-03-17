@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<style>
+      .border-line span {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: white;
+        padding: 0 5px;
+      }
+      #outer{
+        position: relative;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 20px;
+        width: 200px;
+        height: 70px;
+      }
+      #submit{
+        margin-top: 40px;
+      }
+      #cancel{
+        margin-left: 70px;
+      }
+</style>
+<body>
+    <div id="outer">
+        <form action="">
+        <div class="border-line">
+            <span>Fruit juice size</span>
+                <input type="radio" id="option1"  >
+                <label for="option1">Small </label><br>
+                <input type="radio" id="option2">
+                <label for="option2">Medium </label><br>
+                <input type="radio" id="option3">
+                <label for="option3">Large </label><br>
+                
+            </div>
+            <button id="submit">Submit</button>
+            <button id="cancel">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>

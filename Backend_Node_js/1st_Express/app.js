@@ -1,12 +1,22 @@
 const express = require('express');
 const fs=require('fs');
 const path= require('path');
-const app = express();
+const app = express(); // this returns a function to app is a object of funtion.
 const bodyparser = require('body-parser');
 const mongoose=require('mongoose')
 mongoose.set('strictQuery', true);
 const port = process.env.PORT || 80;  //env stands for environment, this will set the port according if the website is hosted on a domain || if not it will take the 80 port.. to set the environment variable, type in terminal : - set PORT=5000
 mongoose.connect('mongodb://127.0.0.1:27017/login_details')
+
+/*MIDDLE WARE
+app.use((req,res,next)=>{
+    console.log('In the middleware');
+    next();  //Allows the request to continue in the next middleware
+})
+app.use((req,res,next)=>{
+    console.log('Another middleware');
+})
+*/
 
 //Creating schema
 let detail = new mongoose.Schema({

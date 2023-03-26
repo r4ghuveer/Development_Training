@@ -11,4 +11,8 @@ Backend_Node_js/Connect_to_DB/package-lock.json
 Backend_Node_js/Connect_to_DB/package.json 
 package.json 
 package-lock.json 
-React/* 
+React/*
+Electron/node_modules
+Electron/package-lock.json
+
+

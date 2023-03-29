@@ -1,6 +1,6 @@
 const {app, BrowserWindow, Menu, ipcMain} = require("electron");
 const { spawn } = require('child_process'); // for using .exe file, and displaying the output text that comes in cmd.
-
+import $ from 'jquery';
 
 let win = null; 
 

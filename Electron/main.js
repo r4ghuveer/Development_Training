@@ -29,6 +29,7 @@ ipcMain.on('start-tracy',()=>{
     child.stdout.on('data',(data)=>{
         win.webContents.send('output',data.toString());
     }); 
+    
     // child.stderr.on('data',(data)=>{
     //     console.error(`=> ${data}`);
     // });

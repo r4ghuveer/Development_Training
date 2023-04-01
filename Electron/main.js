@@ -25,9 +25,9 @@ app.whenReady().then(()=> {
 });
 ipcMain.on('start-tracy',()=>{
     const exepath = 'G:\\Development_Training\\Electron\\exe_file\\Tracy.exe';
-    const child = spawn(exepath);
+    const child = spawn(exepath,['<your voice input>']);
     child.stdout.on('data',(data)=>{
-        win.webContents.send('output',data.toString());
+        win.webContents.send('output',data);
     }); 
 
     

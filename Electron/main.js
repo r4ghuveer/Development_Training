@@ -1,21 +1,31 @@
-const {app, BrowserWindow, Menu, ipcMain} = require("electron");
+const {app, BrowserWindow, Menu, ipcMain, Tray} = require("electron");
+const path = require('path');
 const { spawn } = require('child_process'); // for using .exe file, and displaying the output text that comes in cmd.
 
 let win = null; 
 
 app.whenReady().then(()=> {
+    tray = new Tray('./assets/icon.ico');
     win = new BrowserWindow({
         width: 800,
         height: 600,
+        icon: path.join(__dirname, './assets/icon.ico'),
         resizable: false,
         webPreferences: {
             nodeIntegration: true, // Integrating node to electron 
             contextIsolation: false,
         }
     })
+    win.on('minimize',()=>{
+        win.hide();
+    });
+    tray.on('click',()=>{
+        win.show();
+    })
     win.loadFile("index.html")
     
 });
+
 
 ipcMain.on('start-tracy',(event)=>{
     const exepath = 'G:\\Development_Training\\Electron\\exe_file\\Tracy.exe';

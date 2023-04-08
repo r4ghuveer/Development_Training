@@ -6,5 +6,5 @@ button1.addEventListener('click',()=>{
 });
 ipcRenderer.on('output',(event,data)=>{
     let out = document.getElementById('inp');
-    out.innerHTML=data;
+    out.value=data;
 });

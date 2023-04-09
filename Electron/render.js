@@ -4,6 +4,9 @@ const button1 = document.getElementById('btn');
 
 button1.addEventListener('mouseover', () => {
   button1.style.cursor = 'pointer';
+  if(button1.style.backgroundColor==='white'){
+    button1.style.backgroundColor='white';
+  }
 });
 
 button1.addEventListener('mouseout', () => {

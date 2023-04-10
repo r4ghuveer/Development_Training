@@ -23,7 +23,6 @@ app.whenReady().then(()=> {
         win.show();
     })
     win.loadFile("index.html")
-    
 });
 
 

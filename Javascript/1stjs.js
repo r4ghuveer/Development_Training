@@ -4,4 +4,5 @@ function substraction(num){
     num=num-5;
     console.log(num);
 }
+
 substraction(5);

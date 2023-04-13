@@ -12,7 +12,12 @@ button1.addEventListener('mouseout', () => {
   button1.style.backgroundColor='bisque';
 });
 button1.addEventListener('click',()=>{
-    ipcRenderer.send('start-tracy');
+    if(button1.style.borderColor="black"){
+      button1.style.borderColor="pink";
+    }
+    button1.style.borderColor="black";
+    
+    // ipcRenderer.send('start-tracy');
 });
 ipcRenderer.on('output',(event,data)=>{
     let out = document.getElementById('inp');

@@ -17,7 +17,7 @@ button1.addEventListener('click',()=>{
     }
     
     
-    // ipcRenderer.send('start-tracy');
+    ipcRenderer.send('start-tracy');
 });
 ipcRenderer.on('output',(event,data)=>{
     let out = document.getElementById('inp');

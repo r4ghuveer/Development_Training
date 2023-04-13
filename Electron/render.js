@@ -15,7 +15,7 @@ button1.addEventListener('click',()=>{
     if(button1.style.borderColor="black"){
       button1.style.borderColor="pink";
     }
-    button1.style.borderColor="black";
+    
     
     // ipcRenderer.send('start-tracy');
 });

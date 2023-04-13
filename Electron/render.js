@@ -7,7 +7,6 @@ button1.addEventListener('mouseover', () => {
     button1.style.backgroundColor='white';
 
 });
-
 button1.addEventListener('mouseout', () => {
   button1.style.cursor = 'default';
   button1.style.backgroundColor='bisque';

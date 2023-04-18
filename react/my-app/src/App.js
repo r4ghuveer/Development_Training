@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Navbar title="First Nav" aboutText="This is the first prop test"/> 
-    <div className="container">
+    <div className="container my-3">
       <TextForm heading="Enter the text"/>
 
     </div>

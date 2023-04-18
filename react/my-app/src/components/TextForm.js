@@ -6,8 +6,9 @@ export default function TextForm(props) {
       console.log("convert but was clicked");
       setText("You have click uppercase button");
     };
-    const handleOnChange=()=>{
+    const handleOnChange=(event)=>{
       console.log("on change");
+      setText(event.target.value);
     };
   return (
     <div>

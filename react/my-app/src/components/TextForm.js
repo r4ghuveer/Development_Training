@@ -11,7 +11,6 @@ export default function TextForm(props) {
       setText(event.target.value);
     };
      const [text,setText] = useState('Enter the text'); //here text is a variable, 'enter the text' is a default string for text, and setText is the function that we will call to give value to text variable.
-    
   return (
     <div>
         <div class="mb-3">

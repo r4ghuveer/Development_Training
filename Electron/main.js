@@ -31,7 +31,7 @@ ipcMain.on('start-tracy',(event)=>{
     const child = spawn(exepath);
     ipcMain.on('close-exe',(event)=>{
         child.kill();
-        win.webContents.send('close-exe-msg','Tracy closed');
+        console.log("ended");
     });
     child.stdout.on('data',(data)=>{
         win.webContents.send('output',data.toString());

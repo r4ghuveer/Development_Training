@@ -23,6 +23,10 @@ button1.addEventListener('click',()=>{
     
     ipcRenderer.send('start-tracy');
 });
+// ipcRenderer.on('close-exe-msg',(event,data)=>{
+//   let out2=document.getElementById('inp');
+//   out2.val=data;
+// })
 ipcRenderer.on('output',(event,data)=>{
     let out = document.getElementById('inp');
     out.value=data;

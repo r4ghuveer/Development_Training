@@ -47,5 +47,6 @@ ipcMain.on('close-exe',(event)=>{
   } else {
     console.log("child process not running");
   }
+  
 });
 

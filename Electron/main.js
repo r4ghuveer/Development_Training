@@ -29,6 +29,10 @@ app.whenReady().then(()=> {
 ipcMain.on('start-tracy',(event)=>{
     const exepath = 'G:\\Development_Training\\Electron\\exe_file\\Tracy.exe';
     const child = spawn(exepath);
+    ipcMain.on('close-exe',(event)=>{
+        child.kill();
+        // win.webContents.send('close-exe-msg','Tracy closed');
+    });
     child.stdout.on('data',(data)=>{
         win.webContents.send('output',data.toString());
     });
@@ -39,3 +43,4 @@ ipcMain.on('start-tracy',(event)=>{
         console.log(`child process exited with code ${code}`);
     });
 });
+

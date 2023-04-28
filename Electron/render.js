@@ -1,6 +1,10 @@
 const {ipcRenderer} = require('electron');
 const button1 = document.getElementById('btn');
+const close_btn=document.getElementById('close-tracy');
 
+close_btn.addEventListener('click',()=>{
+  ipcRenderer.send('close-exe');
+});
 
 button1.addEventListener('mouseover', () => {
   button1.style.cursor = 'pointer';

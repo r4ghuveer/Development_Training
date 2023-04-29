@@ -9,7 +9,6 @@ close_btn.addEventListener('click',()=>{
 button1.addEventListener('mouseover', () => {
   button1.style.cursor = 'pointer';
     button1.style.backgroundColor='white';
-
 });
 button1.addEventListener('mouseout', () => {
   button1.style.cursor = 'default';

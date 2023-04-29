@@ -25,7 +25,6 @@ app.whenReady().then(()=> {
     })
     win.loadFile("index.html")
 
-    
     win.on('closed',()=>{
         tray.destroy();
         tray=null;

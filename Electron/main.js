@@ -1,6 +1,7 @@
 const {app, BrowserWindow, Menu, ipcMain, Tray} = require("electron");
 const path = require('path');
 const { spawn } = require('child_process'); // for using .exe file, and displaying the output text that comes in cmd.
+const { exec } = require('child_process');
 let child;
 let win = null; 
 
@@ -41,11 +42,16 @@ ipcMain.on('start-tracy',(event)=>{
     });
 });
 ipcMain.on('close-exe',(event)=>{
-    if (child) {
-    console.log("ended");
-    child.kill();
-  } else {
-    console.log("child process not running");
-  }
+    const process = 'Tracy.exe';
+    exec(`taskkill /f /im ${process}`, (error, stdout, stderr) => {
+        if (error) {
+          console.error(`Error executing taskkill: ${error}`);
+          return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+      });
+      win.webContents.send('terminated');
+    
 });
 

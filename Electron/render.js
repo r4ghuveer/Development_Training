@@ -1,4 +1,4 @@
-const {ipcRenderer} = require('electron');
+const {ipcRenderer} = require('electron'); // there is a "remote" module provided that reduces the amount of usage of ipcrenderer and ipcmain again and again
 const button1 = document.getElementById('btn');
 const close_btn=document.getElementById('close-tracy');
 

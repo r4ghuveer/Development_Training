@@ -4,7 +4,7 @@ export default function TextForm(props) {
     const HandleUpClick= () =>{
       console.log("convert but was clicked");
       let up = text.toUpperCase();
-      setText(up); //here setText is a hook (since we are not able to directly change state we need to use setText hook)
+      setText(up); //here setText is a hook (since we are not able to directly change state(for that we need to use class based components), instead we need to use setText hook(for function based components))
     };
     const handleOnChange=(event)=>{
       console.log("on change");

@@ -63,6 +63,7 @@ app.post('/index',(req,res) =>{
         })
     
 });
+
 app.get('/about',(req,res) =>{ //for get request  
     res.send("About page");    //sends response to get request
 

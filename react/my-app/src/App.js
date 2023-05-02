@@ -9,7 +9,7 @@ function App() {
     <Navbar title="First Nav" aboutText="This is the first prop test"/> 
   
       <TextForm heading="Enter the text"/>
-    
+  
     </>
   );
 }

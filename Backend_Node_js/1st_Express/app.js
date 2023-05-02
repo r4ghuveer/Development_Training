@@ -62,7 +62,6 @@ app.post('/index',(req,res) =>{
             console.log('some error occurred!')
         })
     
-
 });
 app.get('/about',(req,res) =>{ //for get request  
     res.send("About page");    //sends response to get request

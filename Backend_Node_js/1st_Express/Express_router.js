@@ -7,6 +7,5 @@ const shopRoutes = require('./routes/shop');
 app.use(adminRoutes);
 app.use(shopRoutes);
 
-
 app.listen(3000);
 

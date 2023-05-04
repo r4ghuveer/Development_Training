@@ -1,4 +1,5 @@
-const express=require('express');
+// using the routes folder(admin.js & shop.js)
+const express=require('express'); 
 const app = express();
 
 const adminRoutes = require('./routes/admin');

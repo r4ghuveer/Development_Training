@@ -1,4 +1,6 @@
+const express = require('express');
+const router=express.Router();
 
-app.use('/',(req,res,next)=>{
+router.use('/',(req,res,next)=>{
     res.send('<h1>Hello from Express</h1>');
 })

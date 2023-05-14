@@ -33,4 +33,4 @@ ipcRenderer.on('output',(event,data)=>{
 ipcRenderer.on('terminated',(event,data)=>{
   let out2=document.getElementById('inp');
   out2.value="Tracy Terminated!";
-})
+});

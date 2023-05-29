@@ -62,7 +62,6 @@ In summary, Swing emerged as an improved alternative to AWT, addressing its limi
 
 <br>
 
-
 >Unit 5
 
 Q1) Describe the Life cycle of an Applet with diagram in details and its Hierarchy of Applet class. Write an 

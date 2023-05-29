@@ -64,5 +64,4 @@ In summary, Swing emerged as an improved alternative to AWT, addressing its limi
 
 >Unit 5
 
-Q1) Describe the Life cycle of an Applet with diagram in details and its Hierarchy of Applet class. Write an 
-applet program to display sum of two numbers with output.
+Q1) Describe the Life cycle of an Applet with diagram in details and its Hierarchy of Applet class. Write an applet program to display sum of two numbers with output.

@@ -60,7 +60,6 @@ Performance:
 
 In summary, Swing emerged as an improved alternative to AWT, addressing its limitations and providing a more versatile and feature-rich GUI framework. Swing's class hierarchy offers extensive components, layout managers, customization options, and event-driven programming, empowering developers to create modern and interactive Java applications.
 
-
 <br>
 
 >Unit 5

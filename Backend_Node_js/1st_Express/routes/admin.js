@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-router.use('/app-product',(req,res,next)=>{
+router.get('/app-product',(req,res,next)=>{
     res.send("app product page");
 })
 

@@ -10,8 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Mounting adminRoutes and shopRoutes as middleware functions
 app.use('/admin', adminRoutes);
-app.use('/', shopRoutes);
+app.use('/shop', shopRoutes);
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+ 

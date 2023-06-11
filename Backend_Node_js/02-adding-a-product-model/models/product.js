@@ -27,6 +27,7 @@ module.exports = class Product {
         const p = path.join(path.dirname(mainModuleFilename),'data','products.json');
         fs.readFile(p,(err,fileContent)=>{
             if(err){
+                
                 cb([]);
             }
             cb(JSON.parse(fileContent));

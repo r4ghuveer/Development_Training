@@ -11,6 +11,7 @@ const server = http.createServer((req, res) => {
     res.write('</html>');
     return res.end(); 
   }
+  
   if (url === '/message' && method === 'POST') {
     fs.writeFileSync('G:/web_dev/backend_node_js/routing.txt', 'DUMMY');
     res.statusCode = 302;

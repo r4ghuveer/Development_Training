@@ -1,5 +1,7 @@
-const Cart = require('./cart');
 const db = require('../util/database');
+
+const Cart = require('./cart');
+
 module.exports = class Product {
   constructor(id, title, imageUrl, description, price) {
     this.id = id;
@@ -10,7 +12,7 @@ module.exports = class Product {
   }
 
   save() {
-  
+   
   }
 
   static deleteById(id) {
@@ -18,10 +20,10 @@ module.exports = class Product {
   }
 
   static fetchAll() {
-    return db.execute('SELECT * FROM demo');
+    return db.execute('SELECT * FROM products');
   }
 
   static findById(id) {
-  
+    
   }
 };

@@ -33,8 +33,19 @@ sequelize
     .sync()
     .then(result =>{
         // console.log(result);
+        return User.findByPk(1);
+    })
+    .then(user =>{
+        if(!user){
+            return User.create({name : 'max',email: 'test@test.com'});
+        }
+        return user;
+    })
+    .then(user =>{
+        console.log(user);
+        app.listen(3000);
     })
     .catch(err => console.log(err));
 
 
-app.listen(3000);
+

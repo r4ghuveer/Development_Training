@@ -30,7 +30,7 @@ Product.belongsTo(User,{constraints: true , onDelete: 'CASCADE'});
 User.hasMany(Product);// same thing as above
 
 sequelize
-    .sync({force: true})
+    .sync()
     .then(result =>{
         // console.log(result);
     })

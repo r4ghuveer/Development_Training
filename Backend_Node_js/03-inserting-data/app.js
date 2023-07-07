@@ -43,10 +43,11 @@ User.hasMany(Product);// same thing as above
 
 User.hasOne(Cart);
 Cart.belongsTo(User);//same thing
-Cart.belongsToMany(Products);
-Product.belongsToMany(Cart);
+Cart.belongsToMany(Product,{through: CartItem});
+Product.belongsToMany(Cart,{through: CartItem});
 
 sequelize
+    // .sync({force : true})
     .sync()
     .then(result =>{
         // console.log(result);
@@ -60,8 +61,12 @@ sequelize
     })
     .then(user =>{
         console.log(user);
+        return user.createCart()
+    })
+    .then(cart=>{
         app.listen(3000);
     })
+    
     .catch(err => console.log(err));
 
 

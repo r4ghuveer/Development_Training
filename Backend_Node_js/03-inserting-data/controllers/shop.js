@@ -83,7 +83,9 @@ exports.postCart = (req, res, next) => {
       .then(product=>{
         return fetchedCart.addProduct(product,{throught: {quantity: newQuantity}});
       })
-      
+      .then(()=>{
+        res.redirect('/cart');
+      })
       .catch(err=>console.log(err));
     }
   })

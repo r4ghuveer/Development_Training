@@ -78,16 +78,15 @@ exports.postCart = (req, res, next) => {
     if(product){
       //..
     }
-    else{
-      return Product.findByPk(prodId)
-      .then(product=>{
-        return fetchedCart.addProduct(product,{throught: {quantity: newQuantity}});
-      })
-      .then(()=>{
-        res.redirect('/cart');
-      })
-      .catch(err=>console.log(err));
-    }
+    return Product.findByPk(prodId)
+    .then(product=>{
+      return fetchedCart.addProduct(product,{through: {quantity: newQuantity}});
+    })
+    .then(()=>{
+      res.redirect('/cart');
+    })
+    .catch(err=>console.log(err));
+    
   })
   .catch(err=>console.log(err));
 };

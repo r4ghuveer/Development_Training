@@ -45,7 +45,7 @@ exports.getCart = (req, res, next) => {
   req.user
   .getCart()
   .then(cart =>{
-    return cart
+    return cart 
     .getProducts()
     .then(products=>{
       res.render('shop/cart', {
@@ -66,8 +66,7 @@ exports.postCart = (req, res, next) => {
   .getCart()
   .then(cart=>{
     fetchedCart=cart;
-    return cart
-    .getProducts({where : {id : prodId}});
+    return cart.getProducts({where : {id : prodId}});
   })
   .then(products=>{
     let product;
@@ -76,7 +75,9 @@ exports.postCart = (req, res, next) => {
     }
     let newQuantity=1;
     if(product){
-      //..
+      const oldQuantity=product.cartItem.quantity;
+      newQuantity=oldQuantity+1;
+      return fetched 
     }
     return Product.findByPk(prodId)
     .then(product=>{

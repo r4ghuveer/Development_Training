@@ -140,6 +140,7 @@ export class News extends Component {
             this.setState({
                 articles: parsedData.articles ,
                 page : this.state.page+1
+                
             })
         }
         

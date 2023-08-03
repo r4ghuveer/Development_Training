@@ -6,11 +6,11 @@ import PropTypes from 'prop-types'
 
 export class News extends Component {
     static defaultProps = {
-        country : 'in',
+        country: 'in',
         pageSize: 8
     }
     static propTypes = {
-        country : PropTypes.string,
+        country: PropTypes.string,
         pageSize: PropTypes.number
     }
     articles = [
@@ -119,79 +119,68 @@ export class News extends Component {
             "content": "Skip to Content"
         }
     ]
-    constructor() {
-        super();
-        console.log("constructor from news component")
+
+    caps = (string) =>{
+        return string.charAt(0).toUpperCase()+string.slice(1);
+    }
+    constructor(props) {
+        super(props);
         this.state = {
             articles: [],
             loading: false,
             page: 1
         }
+        document.title= `${this.caps(this.props.category)} - Bit News`
     }
+
+
     async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=32e8e8d6244546d992e4cb9419b7c42c&page=1&pagesize=${this.props.pageSize}`
+        this.updateNews();
+    }
+
+
+    handleNextClick = async () => {
+        this.setState({ page: this.state.page + 1 })
+        this.updateNews();
+    }
+
+
+    async updateNews() {
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=32e8e8d6244546d992e4cb9419b7c42c&page=${this.state.page}&pagesize=${this.props.pageSize}`
         this.setState({
-            loading : true
+            loading: true
         })
         let data = await fetch(url);
-        console.log(data);
         let parsedData = await data.json();
-        this.setState({ articles: parsedData.articles , totalResults : parsedData.totalResults,loading : false})
+        this.setState({ articles: parsedData.articles, totalResults: parsedData.totalResults, loading: false })
     }
 
-     handleNextClick = async() => {
-         console.log("next");
-        if(!(this.state.page+1 > Math.ceil(this.state.totalResults/this.props.pageSize))){
 
-            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=32e8e8d6244546d992e4cb9419b7c42c&page=${this.state.page+1}&pagesize=${this.props.pageSize}`
-            this.setState({loading: true})
-            let data = await fetch(url);
-            console.log(data);
-            let parsedData = await data.json();
-            console.log(parsedData);
-            this.setState({
-                articles: parsedData.articles ,
-                page : this.state.page+1,
-                loading : false
-                
-            })
-        }
-        
-        
+    handlePreviousClick = async () => {
+
+        this.setState({ page: this.state.page - 1 })
+        this.updateNews();
     }
 
-    handlePreviousClick =  async() => {
-        console.log("prev");
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=32e8e8d6244546d992e4cb9419b7c42c&page=${this.state.page-1}&pagesize=${this.props.pageSize}`
-        this.setState({loading: true})
-        let data = await fetch(url);
-        console.log(data);
-        let parsedData = await data.json();
-        console.log(parsedData);
-        this.setState({
-            articles: parsedData.articles ,
-            page : this.state.page-1,
-            loading: false
-        })
 
-    }
 
     render() {
         return (
             <div className="container my-3">
-                <h1 className="text-center">Bit News - Top headlines</h1>
-                
-                {this.state.loading && < Spinner/>}
+                <h1 className="text-center my-5">Bit News - Top {this.caps(this.props.category)} headlines  </h1>
+
+                {this.state.loading && < Spinner />}
+
                 <div className="row">
                     {!this.state.loading && this.state.articles.map((element) => {
                         return <div className="col-md-3" key={element.url}>
-                            <NewsItem title={element.title?.slice(0, 45)} description={element.description?.slice(0, 88)} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name}/>
+                            <NewsItem title={element.title?.slice(0, 45)} description={element.description?.slice(0, 88)} imageUrl={element.urlToImage} newsUrl={element.url} author={element.author} date={element.publishedAt} source={element.source.name} />
 
                         </div>
                     })}
                     <div className="d-flex justify-content-between">
-                        <button disabled={this.state.page<=1} type="button" className="btn btn-info mx-3 my-5" onClick={this.handlePreviousClick}>Previous</button>
-                        <button disabled={this.state.page+1 > Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn btn-info my-5" onClick={this.handleNextClick}>Next</button>
+                        <button disabled={this.state.page <= 1} type="button" className="btn btn-info mx-3 my-5" onClick={this.handlePreviousClick}>Previous</button>
+                        <button disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)} type="button" className="btn btn-info my-5" onClick={this.handleNextClick}>Next</button>
                     </div>
                 </div>
             </div>

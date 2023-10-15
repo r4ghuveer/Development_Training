@@ -3,6 +3,7 @@
 3) A .vscode folder will be created, inside it go to launch.json.
 4) add these,
 
+
 ```json
     "restart": true, //this restarts the debugger along with nodemon
     "runtimeExecutable": "nodemon",
